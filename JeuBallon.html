@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeu Ballon</title>
+  <link rel="stylesheet" href="JeuBallon.css">
+  <script defer src="JeuBallon.js"></script>
+</head>
+  <body>
+    <h1>Jeu du ballon rebondissant</h1>
+    <fieldset>
+      <legend>Tracer le terrain :</legend>
+      <table>
+        <tr>
+          <td>Largeur terrain:</td><td> <input type="text" id="w"><span>*</span></td></tr>
+        <tr>
+          <td>hauteur terrain:</td><td> <input type="text" id="h"><span>*</span></td></tr>
+        <tr>
+          <td>Couleur terrain:</td>
+          <td> 
+            <input type="radio" name="c" value="green" checked="checked">Vert 
+            <input type="radio" name="c" value="red">Rouge
+            <input type="radio" name="c" value="black">Noire<span>*</span>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <fieldset>
+      <legend>Dessiner le ballon :</legend>
+      <table>
+        <tr>
+          <td>Diamêtre Ballon:</td><td> 
+            <input type="text" id="d"><span>*</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Couleur de remplissage :</td>
+          <td> 
+            <input type="radio" name="cr" value="gold" checked="checked">Dorée 
+            <input type="radio" name="cr" value="silver">Argenté
+            <input type="radio" name="cr" value="#CD7F32">Bronze
+          </td>
+        </tr>
+        <tr>
+          <td>Couleur du contour:</td><td> 
+            <input type="radio" name="cc" value="white" checked="checked">Blanc 
+            <input type="radio" name="cc" value="blue">Bleu
+            <input type="radio" name="cc" value="orange">Orange</td>
+        </tr>
+        </table>
+      </fieldset>
+      <fieldset>
+        <legend>Animer le ballon :</legend>
+        <table>
+          <tr>
+            <td>Position depart X</td><td> <input type="number" id="pox"><span>*</span></td>
+          </tr>
+          <tr>
+            <td>Position depart Y</td><td> <input type="number" id="poy"><span>*</span></td>
+          </tr>
+          <tr>
+            <td>Vitesse de mouvement :</td><td> <select id="v"><option value="20">Lent<option
+          value="7" selected>Moyenne<option value="1">Rapide</select><span>*</span></td>
+          </tr>
+        </table>
+      </fieldset>
+        <p>
+          <button onclick="dessinerTerrain()">Dessiner le terrain</button>
+          <button onclick="dessinerBallon()">Dessiner le ballon</button>
+          <button onclick="start()">Démarrer / Suspendre l'animation</button> <!-- bouton avec 2 fonctions -->
+          <!-- <button onclick="pause()">Suspendre l'animation</button> -->
+          <button onclick="stop()">Arrêter l'animation</button>
+        </p>
+
+        <!-- J'ai utilisé div car c'est plus facile pour moi a manipuler -->
+        <div id="canvas">
+          <div id="ballon"></div>
+        </div>     
+    </body>
+</html>

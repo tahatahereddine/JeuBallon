@@ -1,0 +1,26 @@
+span {
+  color: red; 
+  margin-right: 5px; 
+}
+body { font-family: arial; font-size: 17px; margin: 10px;
+}
+.input { 
+  Width :50px ; 
+}
+button:hover { 
+  font-family : verdana; 
+  font-size : 12pt ; 
+  color: brown; 
+}
+fieldset { 
+  display:inline-block; 
+}
+
+#canvas {
+  position: relative;
+}
+
+#ballon{
+  margin: 0;
+  position: absolute;
+}
